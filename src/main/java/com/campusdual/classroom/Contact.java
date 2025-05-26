@@ -75,16 +75,17 @@ public class Contact implements ICallActions {
 
     @Override
     public void callOtherNumber(String number) {
-        System.out.println("Estás llamando a " + number);
+
+        System.out.println(this.getName() + " " + this.getSurnames() + " estás llamando al número: " + number);
     }
 
     @Override
     public void showContactDetails() {
         System.out.println("Contacto{" +
                 "\nNombre: " + getName() +
-                "\nApellidos: " + getSurnames()  +
-                "\nTeléfono: " + getPhone()  +
-                "\nCódigo: " + getCode()+
+                "\nApellidos: " + getSurnames() +
+                "\nTeléfono: " + getPhone() +
+                "\nCódigo: " + getCode() +
                 '}');
     }
 
@@ -96,9 +97,9 @@ public class Contact implements ICallActions {
                     "Pulse 2 para llamar a otro contacto\n" +
                     "Pulse 3 para seleccionar los detalles del contacto\n" +
                     "Pulse 4 para salir del menú de acciones"
-                   );
+            );
 
-            numeroElegido = Utils.integer( "Seleccione una opción: ");
+            numeroElegido = Utils.integer("Seleccione una opción: ");
 
             switch (numeroElegido) {
                 case 1:
